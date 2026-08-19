@@ -1,0 +1,101 @@
+/* Local styles for the About page — keep changes local and subtle per AGENTS.md */
+.about-page {
+    width: min(1000px, calc(100% - 24px));
+}
+
+.about-page .about-card {
+    padding: 1.5rem 1.7rem;
+}
+
+.about-card>* {
+    max-width: 66ch;
+}
+
+.about-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.9rem;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+    letter-spacing: 0.02em;
+    color: #1a1a1a;
+}
+
+.about-card p {
+    color: #222;
+    line-height: 2.;
+    margin: 0.95rem 0;
+    font-size: 1.14rem;
+    max-width: 66ch;
+    width: 100%;
+    text-align: justify;
+}
+
+@media (max-width: 1280px) and (min-width: 601px) {
+    .about-page {
+        width: min(920px, calc(100% - 24px));
+    }
+
+    .about-page .about-card {
+        padding: 1.15rem 1.3rem;
+    }
+
+    .about-title {
+        font-size: 1.65rem;
+        margin-bottom: 0.55rem;
+    }
+
+    .about-card p {
+        font-size: 1.02rem;
+        line-height: 1.78;
+        margin: 0.7rem 0;
+    }
+
+    .about-actions {
+        margin: 0.8rem 0 1rem;
+    }
+
+    .about-actions li {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin: 0.4rem 0;
+    }
+}
+
+.about-actions {
+    margin: 1rem 0 1.25rem 0;
+    padding-left: 1.2rem;
+    max-width: 66ch;
+    list-style: disc;
+    list-style-position: outside;
+}
+
+.about-actions li {
+    margin: 0.6rem 0;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .about-page {
+        width: min(100%, calc(100% - 12px));
+    }
+
+    .about-title {
+        font-size: 1.4rem;
+    }
+
+    .about-card p {
+        font-size: 1.06rem;
+        line-height: 1.95;
+    }
+
+    .about-actions li {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+}

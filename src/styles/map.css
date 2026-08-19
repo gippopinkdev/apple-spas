@@ -27,6 +27,11 @@
     overflow: visible;
 }
 
+/* Ensure touch gestures are handled by our JS handlers, not the browser viewport zoom */
+.map-stage svg {
+    touch-action: none;
+}
+
 .map-stage svg.dragging {
     cursor: grabbing;
 }
