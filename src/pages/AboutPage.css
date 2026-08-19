@@ -25,12 +25,107 @@
 
 .about-card p {
     color: #222;
-    line-height: 2.;
+    line-height: 2.1;
     margin: 0.95rem 0;
     font-size: 1.14rem;
     max-width: 66ch;
     width: 100%;
     text-align: justify;
+}
+
+.about-support {
+    margin: 4px 0 18px;
+    padding: 21px 0 17px;
+    width: 100%;
+    max-width: 66ch;
+    border: 1px solid #c6dfc8;
+    border-radius: 7px;
+    background: #fbfefb;
+}
+
+.about-support-title {
+    margin-bottom: 14px;
+    padding: 0 19px;
+    color: var(--green-dark);
+    font-size: 19px;
+    line-height: 1.2;
+    font-weight: 750;
+}
+
+.about-support p {
+    margin: 0 0 18px;
+    padding: 0 19px;
+    color: #666c68;
+    font-size: 13px;
+    line-height: 1.45;
+    text-align: left;
+    max-width: none;
+    width: auto;
+}
+
+.about-telegram-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: calc(100% - 38px);
+    margin: 0 19px;
+    min-height: 40px;
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--green);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 650;
+    transition:
+        background 160ms ease,
+        transform 160ms ease;
+}
+
+.about-telegram-button:hover {
+    background: var(--green-dark);
+}
+
+.about-telegram-button:active {
+    transform: translateY(1px);
+}
+
+.about-github-link {
+    margin: 0 0 0.2rem;
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+.about-github-corner {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 1100;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 7px 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.94);
+
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.about-github-corner:hover {
+    color: var(--green-dark);
+    border-color: #c6dfc8;
 }
 
 @media (max-width: 1280px) and (min-width: 601px) {
@@ -51,6 +146,32 @@
         font-size: 1.02rem;
         line-height: 1.78;
         margin: 0.7rem 0;
+    }
+
+    .about-support {
+        padding: 17px 0 15px;
+        margin-bottom: 14px;
+    }
+
+    .about-support-title {
+        font-size: 17px;
+        margin-bottom: 12px;
+        padding: 0 16px;
+    }
+
+    .about-support p,
+    .about-github-link {
+        font-size: 1rem;
+    }
+
+    .about-support p {
+        padding: 0 16px;
+    }
+
+    .about-telegram-button {
+        width: calc(100% - 32px);
+        margin: 0 16px;
+        justify-self: stretch;
     }
 
     .about-actions {
@@ -85,6 +206,14 @@
         width: min(100%, calc(100% - 12px));
     }
 
+    .about-github-corner {
+        right: 10px;
+        bottom: 10px;
+        min-height: 32px;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
     .about-title {
         font-size: 1.4rem;
     }
@@ -92,6 +221,10 @@
     .about-card p {
         font-size: 1.06rem;
         line-height: 1.95;
+    }
+
+    .about-support p {
+        line-height: 1.5;
     }
 
     .about-actions li {

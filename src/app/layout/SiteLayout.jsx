@@ -9,6 +9,15 @@ export default function SiteLayout() {
             <main className="site-main">
                 <Outlet />
             </main>
+
+            <a
+                className="site-github-corner"
+                href="https://github.com/gippopinkdev/apple-spas"
+                target="_blank"
+                rel="noreferrer"
+            >
+                Данный проект доступен на GitHub
+            </a>
         </div>
     );
 }
