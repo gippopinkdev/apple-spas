@@ -3,27 +3,27 @@ import CandidatePanel from "./CandidatePanel";
 
 function App() {
     const mapRef = useRef(null);
-
+    const base = import.meta.env.BASE_URL;
     const [selectedId, setSelectedId] = useState(null);
     const [districtMap, setDistrictMap] = useState({});
     const [candidates, setCandidatesMap] = useState({});
     // const [selectedCandidate, setSelectedCandidate] = useState(null);
-
     const viewBoxRef = useRef(null);
     const draggingRef = useRef(false);
     const dragStartRef = useRef(null);
     
     useEffect(() => {
         async function loadSVG() {
-            const response = await fetch("/map.svg");
+            const response = await fetch(`${base}map.svg`);
             const svgText = await response.text();
-            const districtResponse = await fetch("/districts.json");
+ 
+            const districtResponse = await fetch(`${base}districts.json`);
             const districtMapData = await districtResponse.json();
-            const candidatesResponse = await fetch("/candidates.json");
-            setCandidatesMap(await candidatesResponse.json());
-            
             setDistrictMap(districtMapData);
-
+ 
+            const candidatesResponse = await fetch(`${base}candidates.json`);
+            setCandidatesMap(await candidatesResponse.json());
+ 
             mapRef.current.innerHTML = svgText;
 
             const svg = mapRef.current.querySelector("svg");
@@ -57,12 +57,6 @@ function App() {
                 path.classList.add("interactive-path");
 
                 const district = districtMapData[path.id];
-
-                console.log("District", district)
-                console.log("candidates", candidates[district?.number])
-//                 if (candidates[selectedId] || { district: selectedId }) {
-//     path.classList.add("mapped");
-// }
 
                 path.addEventListener("click", () => {
                     if (!draggingRef.current) {
@@ -295,12 +289,12 @@ function App() {
         loadSVG();
     }, []);
 
-    console.log("District map:", districtMap);
     const selectedCandidate = selectedId
     ? candidates[selectedId] || {
           district: selectedId,
       }
     : null;
+    console.log(selectedCandidate)
     
     return (
         <div className="app">
@@ -318,35 +312,11 @@ function App() {
                     ref={mapRef}
                     className="map"
                 />
-                {/* {selectedId && (
-                    <aside className="selection-panel">
-                        <button
-                            className="close-button"
-                            onClick={() => setSelectedId(null)}
-                            aria-label="Close"
-                        >
-                            ×
-                        </button>
-
-                        <div className="selection-content">
-                            <h2>Selected area</h2>
-
-                            <p>
-                                SVG element:
-                            </p>
-
-                            <strong>{selectedId}</strong>
-                            
-                        </div>
-                    </aside>
-                )} */}
-
-
 
             </main>
         <CandidatePanel
             candidate={selectedCandidate}
-            isOpen={Boolean(0)}
+            isOpen={Boolean(selectedId)}
             onClose={() => setSelectedId(null)}
         />
         </div>
