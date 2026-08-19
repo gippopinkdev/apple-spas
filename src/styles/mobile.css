@@ -1,0 +1,111 @@
+@media (max-width: 900px) {
+    .site-header-inner {
+        padding: 12px 14px;
+        align-items: center;
+    }
+
+    .site-main {
+        padding-top: 58px;
+    }
+
+    .home-page,
+    .content-page {
+        width: min(100%, calc(100% - 16px));
+        padding-top: 10px;
+    }
+
+    .home-map-card {
+        min-height: min(74dvh, 820px);
+    }
+
+    .candidate-panel {
+        width: min(390px, 92vw);
+    }
+
+    .candidate-header {
+        grid-template-columns: 145px minmax(0, 1fr);
+    }
+
+    .candidate-photo {
+        width: 145px;
+        height: 155px;
+    }
+
+    .candidate-title h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 560px) {
+    .site-header-inner {
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .site-nav {
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .site-main {
+        padding-top: 70px;
+    }
+
+    .home-page,
+    .content-page {
+        width: min(100%, calc(100% - 12px));
+    }
+
+    .home-hero,
+    .content-card {
+        padding: 14px 14px 12px;
+        border-radius: 0;
+    }
+
+    .home-map-card {
+        min-height: 72dvh;
+        border-radius: 0;
+    }
+
+    .candidate-panel {
+        width: 100%;
+        border-left: 0;
+    }
+
+    .candidate-header {
+        grid-template-columns: 125px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .candidate-photo {
+        width: 125px;
+        height: 140px;
+    }
+
+    .candidate-title h2 {
+        font-size: 24px;
+    }
+
+    .candidate-body,
+    .candidate-top,
+    .empty-district {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .candidate-panel,
+    .social-link,
+    .telegram-button,
+    .candidate-panel-close,
+    .interactive-path {
+        transition: none;
+    }
+
+    .candidate-panel {
+        animation: none;
+    }
+}

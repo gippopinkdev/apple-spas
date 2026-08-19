@@ -1,6 +1,12 @@
 # Dependencies
 node_modules/
 
+# AI
+.github/copilot-instructions.md
+.cursor/rules/
+CLAUDE.md
+AGENTS.md
+
 # Production build
 dist/
 

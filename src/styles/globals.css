@@ -1,0 +1,47 @@
+:root {
+    --green: #4ca653;
+    --green-dark: #398c40;
+    --green-light: #eff8f0;
+    --text: #151817;
+    --muted: #747a76;
+    --border: #dce1dc;
+    --background: #ffffff;
+    --surface: #ffffff;
+    --page-bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: #ffffff;
+}
+
+body,
+a,
+button,
+input,
+textarea,
+select {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}

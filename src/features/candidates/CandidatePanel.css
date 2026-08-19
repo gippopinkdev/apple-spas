@@ -1,17 +1,3 @@
-:root {
-    --green: #4ca653;
-    --green-dark: #398c40;
-    --green-light: #eff8f0;
-    --text: #151817;
-    --muted: #747a76;
-    --border: #dce1dc;
-    --background: #ffffff;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 .candidate-panel-root {
     position: fixed;
     inset: 0;
@@ -136,7 +122,6 @@
     line-height: 1;
     font-weight: 600;
 }
-
 
 .candidate-photo img {
     display: block;
@@ -443,8 +428,6 @@
     font-size: 17px;
 }
 
-/* Empty district */
-
 .empty-district {
     min-height: 100%;
 
@@ -499,73 +482,8 @@
     line-height: 1.55;
 }
 
-/* Accessibility */
-
 .candidate-panel button:focus-visible,
 .candidate-panel a:focus-visible {
     outline: 2px solid var(--green);
     outline-offset: 3px;
-}
-
-/* Tablet */
-
-@media (max-width: 900px) {
-    .candidate-panel {
-        width: min(390px, 92vw);
-    }
-
-    .candidate-header {
-        grid-template-columns: 145px minmax(0, 1fr);
-    }
-
-    .candidate-photo {
-        width: 145px;
-        height: 155px;
-    }
-
-    .candidate-title h2 {
-        font-size: 25px;
-    }
-}
-
-/* Small screens */
-
-@media (max-width: 560px) {
-    .candidate-panel {
-        width: 100%;
-        border-left: 0;
-    }
-
-    .candidate-header {
-        grid-template-columns: 125px minmax(0, 1fr);
-        gap: 16px;
-    }
-
-    .candidate-photo {
-        width: 125px;
-        height: 140px;
-    }
-
-    .candidate-title h2 {
-        font-size: 24px;
-    }
-
-    .candidate-body,
-    .candidate-top,
-    .empty-district {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .candidate-panel {
-        animation: none;
-    }
-
-    .social-link,
-    .telegram-button,
-    .candidate-panel-close {
-        transition: none;
-    }
 }
