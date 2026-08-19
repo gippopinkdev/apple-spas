@@ -1,0 +1,28 @@
+{
+    "name": "apple-spas",
+    "version": "1.0.0",
+    "description": "This is a funny website to support the Apple party during the elections.",
+    "type": "module",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github-new:gippopinkdev/apple-spas.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^19.2.8",
+        "react-dom": "^19.2.8"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react": "^6.0.5",
+        "vite": "^8.2.1"
+    }
+}
